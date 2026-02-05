@@ -1,31 +1,33 @@
-# Enter text for the top and bottom of the meme
+# React Meme Generator
 
-# The top text box needs to have a label element associated with it containing the text Top text
+Enter text for the top and bottom of the meme
 
-# The bottom text box needs to have a label element associated with it with the text Bottom text
+The top text box needs to have a label element associated with it containing the text Top text
 
-# Both text boxes should be empty when the page first loads
+The bottom text box needs to have a label element associated with it with the text Bottom text
 
-# Preview the generated meme
+Both text boxes should be empty when the page first loads
 
-# The image element needs to have an html attribute set as follows: data-test-id="meme-image"
+Preview the generated meme
 
-# This image element should show a working image when the page first loads
+The image element needs to have an html attribute set as follows: data-test-id="meme-image"
 
-# Change the meme template (the background image)
+This image element should show a working image when the page first loads
 
-# The meme template selector element needs to have a label element associated with it containing the text Meme template
+Change the meme template (the background image)
 
-# If the user follows the steps below, the doge meme template needs to be selected:
+The meme template selector element needs to have a label element associated with it containing the text Meme template
 
-# a. Click on the label of the meme template selector
+If the user follows the steps below, the doge meme template needs to be selected:
 
-# b. Clear any existing value (eg. with a text box)
+a. Click on the label of the meme template selector
 
-# c. Type the text doge
+b. Clear any existing value (eg. with a text box)
 
-# d. Hit enter
+c. Type the text doge
 
-# Download the meme by clicking on a button
+d. Hit enter
 
-# The button element needs to contain the text Download
+Download the meme by clicking on a button
+
+The button element needs to contain the text Download

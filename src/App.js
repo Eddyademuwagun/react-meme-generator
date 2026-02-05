@@ -1,23 +1,37 @@
 import './App.css';
-import logo from './logo.svg';
+import { useState } from 'react';
 
 export default function App() {
+  const [bottomText, setBottomText] = useState('vici');
+  console.log(bottomText);
+
+  const [topText, setTopText] = useState('eddy');
+  console.log(topText);
+
+  const [memeTemplate, setMemeTemplate] = useState('buzz');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label>
+        meme template
+        <input onChange={(e) => setMemeTemplate(e.target.value)} type="text" />
+      </label>
+      <br></br>
+      <label>
+        top text
+        <input onChange={(e) => setTopText(e.target.value)} type="text" />
+      </label>
+      <br></br> {/* bottom label to be under the top lable*/}
+      <label>
+        bottom text
+        <input onChange={(e) => setBottomText(e.target.value)} type="text" />
+      </label>
+      <br></br>
+      <img
+        src={`https://api.memegen.link/images/${memeTemplate}/${topText}/${bottomText}.webp`}
+        data-test-id="meme-image"
+        alt="Generated meme"
+      />
     </div>
   );
 }
