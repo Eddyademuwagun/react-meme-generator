@@ -5,10 +5,23 @@ export default function App() {
   const [bottomText, setBottomText] = useState('vici');
   console.log(bottomText);
 
-  const [topText, setTopText] = useState('eddy');
+  const [topText, setTopText] = useState('Eddy');
   console.log(topText);
 
   const [memeTemplate, setMemeTemplate] = useState('buzz');
+
+  const [ourUrl, setOurUrl] = useState('');
+
+  const handleDownload = async () => {
+    const url = `https://api.memegen.link/images/${encodeURIComponent(
+      memeTemplate,
+    )}/${encodeURIComponent(topText)}/${encodeURIComponent(bottomText)}.webp`;
+
+    const response = await fetch(url);
+    const blob = await response.blob();
+    console.log(URL.createObjectURL(blob));
+    setOurUrl(URL.createObjectURL(blob));
+  };
 
   return (
     <div className="App">
@@ -17,7 +30,7 @@ export default function App() {
         <input onChange={(e) => setMemeTemplate(e.target.value)} type="text" />
       </label>
       <br></br>
-      <label>
+      <label className="label">
         top text
         <input onChange={(e) => setTopText(e.target.value)} type="text" />
       </label>
@@ -28,11 +41,14 @@ export default function App() {
         data-test-id="meme-image"
         alt="Generated meme"
       />
-      <label>
+      <label className="label">
         <br></br>
         bottom text
         <input onChange={(e) => setBottomText(e.target.value)} type="text" />
       </label>
+      <a download="eddy" href={ourUrl} onClick={handleDownload}>
+        <button>downLoadLink</button>
+      </a>
     </div>
   );
 }

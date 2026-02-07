@@ -37,7 +37,12 @@
   }
 }
 .label {
-  margin: 20px;
-  padding: 20px;
-  font-size: large;
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+input {
+  margin-top: 20px;
+  font-weight: large;
+  align-items: center;
 }
