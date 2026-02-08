@@ -2,11 +2,9 @@ import './App.css';
 import { useState } from 'react';
 
 export default function App() {
-  const [bottomText, setBottomText] = useState('vici');
-  console.log(bottomText);
+  const [bottomText, setBottomText] = useState('Buddy');
 
   const [topText, setTopText] = useState('Eddy');
-  console.log(topText);
 
   const [memeTemplate, setMemeTemplate] = useState('buzz');
 
@@ -19,7 +17,7 @@ export default function App() {
 
     const response = await fetch(url);
     const blob = await response.blob();
-    console.log(URL.createObjectURL(blob));
+
     setOurUrl(URL.createObjectURL(blob));
   };
 
