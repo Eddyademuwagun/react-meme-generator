@@ -25,27 +25,27 @@ export default function App() {
     <div className="App">
       <label className="label">
         meme template
-        <input onChange={(e) => setMemeTemplate(e.target.value)} type="text" />
+        <input onChange={(e) => setMemeTemplate(e.target.value)} />
       </label>
-      <br></br>
+      <br />
       <label className="label">
         top text
-        <input onChange={(e) => setTopText(e.target.value)} type="text" />
+        <input onChange={(e) => setTopText(e.target.value)} />
       </label>
-      <br></br> {/* bottom label to be under the top lable*/}
-      <br></br>
+      <br /> {/* bottom label to be under the top lable*/}
+      <br />
       <img
         src={`https://api.memegen.link/images/${memeTemplate}/${topText}/${bottomText}.webp`}
         data-test-id="meme-image"
         alt="Generated meme"
       />
       <label className="label">
-        <br></br>
+        <br />
         bottom text
-        <input onChange={(e) => setBottomText(e.target.value)} type="text" />
+        <input onChange={(e) => setBottomText(e.target.value)} />
       </label>
       <a download="eddy" href={ourUrl} onClick={handleDownload}>
-        <button>downLoadLink</button>
+        downLoadLink{' '}
       </a>
     </div>
   );
